@@ -25,7 +25,9 @@
     SECTION .data:
       ; 0xA for new line , 0X0 for NULL terminator
       message: db "Dawood Chattha" ; every character will go in 1 byte.mean D = 8 bits, a = 8 bits, and so on 
-      ; message_length: equ 8 ; assemle time directive $-message
+
+      ; message_length: equ 8   ; assemle time directive $-message
+      ; message_length: db 8    ; work on run time 
       message_length: equ $-message ; best way not worry about character counting
       ; message_length: equ 8
       ; is exactly same as #define message_length 8 
